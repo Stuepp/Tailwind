@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind</title>
+</head>
+<body class="bg-stone-900 text-white">
+    <div class="sticky top-0 flex w-full justify-end bg-violet-700 shadow-lg shadow-indigo-500/50 text-white text-2xl">
+        <div class="basis-1/6 shrink"><a href="#ich">Ich bin..</a></div>
+        <div class="basis-1/6 shrink"><a href="#projects">My projects</a></div>
+        <div class="basis-1/6 shrink"><a href="#kontakt">Kontakt</a></div>
+    </div>
+    <div class="flex flex-wrap justify-center m-8 text-white" id="ich">
+        <div class="w-2/4">
+            <div class="flex flex-col text-wrap">
+                <h1 class="text-3xl">Guten Tag! Ich heiße Arthur Henrique Cavalcanti,</h1>
+                <h2 class="text-4xl">Taking the route of a Full Stack Entwickler </h2>
+                <div class="text-wrap text-center my-4">
+                    <p>
+                        I wish to gain work experience, grow in the field and with it improving my self and each time aiming for higher positions
+                    </p>
+                </div>
+                <h3 class="my-1"><button class="bg-purple-500 rounded-full align-middle "><img src="/next.png" class="w-10" id="Idone" onclick="showmore()"></button> What have I done from the e-mail until now?</h3>
+                <div class="hidden" id="doneThings">
+                    <ul class="ml-12">
+                        <li>-> <a href="" class="underline decoration-solid text-sky-400">A simple and pure HTML+CSS page</a></li>
+                        <li>-> <a href="" class="underline decoration-solid text-sky-400">NextJS + Tailwind</a></li>
+                        <li>-> <a href="" class="underline decoration-solid text-sky-400">Docker</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/4 mx-4 shrink-0 min-w-64">
+            <div id="mepic" onclick="flip('mepic', 'projectspic')">
+                <img src="/Screenshot_16.jpg" alt="A picture showing me" class="w-full rounded-lg border-double border-4 border-violet-500 shadow-2xl shadow-indigo-500/50 hover:cursor-pointer">
+            </div>
+            <!--on click flip the image and show my projects in a gallery style-->
+            <div class="hidden" id="projectspic" onclick="flip('projectspic', 'mepic')">
+                <img src="/sample.jpg" alt="" class="rounded-lg  my-3 hover:cursor-pointer">
+                <img src="/sample.jpg" alt="" class="rounded-lg  my-3 hover:cursor-pointer">
+            </div>
+        </div>
+    </div>
+    <hr class="border-1 border-purple-500 border-dashed"/>
+    <div class="flex flex-wrap mb-4 m-8" id="projects">
+        <div class="w-1/2 flex flex-col items-center">
+            <h1 class="text-center underline decoration-solid text-sky-400"><a href="https://github.com/Stuepp/Gravadora">Gravadora</a></h1>
+            <img src="/gravadora.png" alt="" class="w-96 hover:w-max">
+            <p>A class project where one could do alone or in pairs, the team would get a random project and develop it from 0, and would have to attend the items requested by the project. 
+                How to do it, was upt to the team, language, framework, and any other technology.</p>
+        </div>
+        <div class="w-1/2  flex flex-col items-center">
+            <h1 class="text-center underline decoration-solid text-sky-400"><a href="https://github.com/Stuepp/Final-work">Gain Tracker</a></h1>
+            <img src="/academia.drawio.png" alt="" class="w-96 hover:w-max">
+            <p>This class project was similiar with the one in the left, but everything was upt to the team, what would develop and how, the only asked thing was to be a web project, with at least some CRUD.</p>
+        </div>
+    </div>
+    <hr class="border-1 border-purple-500 border-dashed"/>
+    <ul class="flex flex-wrap m-8 gap-4 justify-between" id="kontakt">
+        <li class="basis-1/12 max-w-24 text-center text-center underline decoration-solid text-sky-400"><a href="https://github.com/Stuepp"><img src="/github-logo.png" alt="github-logo" class="mb-3"></a>Github</li>
+        <li class="basis-1/12 max-w-24 text-center text-center underline decoration-solid text-sky-400"><a href="https://www.linkedin.com/in/arthur-cavalcanti-9928ba152/"><img src="/linkedin.png" alt="linkedin logo" class="mb-3"></a>linkedin</li>
+        <li class="basis-1/12 max-w-24 text-center text-center underline decoration-solid text-sky-400"><a href="https://app.netlify.com/teams/stuepp/sites"><img src="/netlify.256x256.png" alt="netlify logo" class="mb-3"></a>Netlify</li>
+        <li class="basis-1/12 max-w-24 text-center">
+            <address>
+                Made by <a href="mailto:arthurh.c@hotmail.com" class="text-center underline decoration-solid text-sky-400">Arthur Henrique Cavalcanti</a>
+            </address>
+        </li>
+    </ul>
+</body>
+<script>
+    let flipArrow = 0;
+
+    function showmore(){    
+        img = document.getElementById('Idone')
+        doneThings = document.getElementById('doneThings')
+        if(this.flipArrow === 0){
+            this.flipArrow = 1
+            img.src ='/down-arrow.png'
+            doneThings.className = 'block'
+        }else{
+            this.flipArrow = 0
+            img.src ='/next.png'
+            doneThings.className = 'hidden'
+        }
+    }
+    function flip(hide, reveal){
+        document.getElementById(hide).className = 'hidden'
+        document.getElementById(reveal).className = 'block'
+    }
+    function expandPic(pic){
+        true_class = document.getElementById(pic).className
+        document.getElementById(pic).className
+    }
+</script>
+</html>
