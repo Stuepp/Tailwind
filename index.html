@@ -8,12 +8,12 @@
 </head>
 <body class="bg-stone-900 text-white">
     <div class="sticky top-0 flex w-full justify-end bg-violet-700 shadow-lg shadow-indigo-500/50 text-white text-2xl">
-        <div class="basis-1/6 shrink"><a href="#ich">Ich bin..</a></div>
-        <div class="basis-1/6 shrink"><a href="#projects">My projects</a></div>
-        <div class="basis-1/6 shrink"><a href="#kontakt">Kontakt</a></div>
+        <div class="w-1/3 shrink mx-4"><a href="#ich">Ich bin..</a></div>
+        <div class="w-1/3 shrink mx-4"><a href="#projects">My projects</a></div>
+        <div class="w-1/3 shrink mx-4"><a href="#kontakt">Kontakt</a></div>
     </div>
     <div class="flex flex-wrap justify-center m-8 text-white" id="ich">
-        <div class="w-2/4">
+        <div class="w-full md:w-2/4">
             <div class="flex flex-col text-wrap">
                 <h1 class="text-3xl">Guten Tag! Ich heiße Arthur Henrique Cavalcanti,</h1>
                 <h2 class="text-4xl">Taking the route of a Full Stack Entwickler </h2>
@@ -24,7 +24,7 @@
                 </div>
                 <h3 class="my-1"><button class="bg-purple-500 rounded-full align-middle "><img src="/next.png" class="w-10" id="Idone" onclick="showmore()"></button> What have I done from the e-mail until now?</h3>
                 <div class="hidden" id="doneThings">
-                    <ul class="ml-12">
+                    <ul class="ml-12 mb-4">
                         <li>-> <a href="" class="underline decoration-solid text-sky-400">A simple and pure HTML+CSS page</a></li>
                         <li>-> <a href="" class="underline decoration-solid text-sky-400">NextJS + Tailwind</a></li>
                         <li>-> <a href="" class="underline decoration-solid text-sky-400">Docker</a></li>
@@ -36,7 +36,6 @@
             <div id="mepic" onclick="flip('mepic', 'projectspic')">
                 <img src="/Screenshot_16.jpg" alt="A picture showing me" class="w-full rounded-lg border-double border-4 border-violet-500 shadow-2xl shadow-indigo-500/50 hover:cursor-pointer">
             </div>
-            <!--on click flip the image and show my projects in a gallery style-->
             <div class="hidden" id="projectspic" onclick="flip('projectspic', 'mepic')">
                 <img src="/me1.jpg" alt="A picture of me making a dunk" class="rounded-lg  my-3 hover:cursor-pointer">
                 <img src="/me2.jpg" alt="A pic of my dog in the park" class="rounded-lg  my-3 hover:cursor-pointer">
@@ -44,16 +43,16 @@
         </div>
     </div>
     <hr class="border-1 border-purple-500 border-dashed"/>
-    <h1 class="m-auto text-center text-2xl">My Projects</h1>
-    <div class="flex flex-col items-center text-center gap-y-4 md:flex-row" id="projects"> <!--flex flex-wrap mb-4 m-8-->
+    <h1 class="m-auto text-center text-2xl" id="projects">My Projects</h1>
+    <div class="flex flex-col items-center text-center gap-y-4 md:flex-row">
         <div class="w-1/2 flex flex-col items-center">
-            <h1 class="text-center underline decoration-solid text-sky-400"><a href="https://github.com/Stuepp/Gravadora">Gravadora</a></h1>
+            <h1 class="text-center underline decoration-solid text-sky-400 text-xl"><a href="https://github.com/Stuepp/Gravadora">Gravadora</a></h1>
             <img src="/gravadora.png" alt="" class="w-96 hover:w-max">
             <p>A class project where one could do alone or in pairs, the team would get a random project and develop it from 0, and would have to attend the items requested by the project. 
                 How to do it, was upt to the team, language, framework, and any other technology.</p>
         </div>
         <div class="w-1/2  flex flex-col items-center">
-            <h1 class="text-center underline decoration-solid text-sky-400"><a href="https://github.com/Stuepp/Final-work">Gain Tracker</a></h1>
+            <h1 class="text-center underline decoration-solid text-sky-400 text-xl"><a href="https://github.com/Stuepp/Final-work">Gain Tracker</a></h1>
             <img src="/academia.drawio.png" alt="" class="w-96 hover:w-max">
             <p>This class project was similiar with the one in the left, but everything was upt to the team, what would develop and how, the only asked thing was to be a web project, with at least some CRUD.</p>
         </div>
